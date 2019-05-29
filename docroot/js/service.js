@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.icesp", "com.icesp.cadastro.service", "icesp-cadastro-portlet");

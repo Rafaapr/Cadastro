@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.icesp.cadastro.model.cadastroUsuario" />
+	<class name="com.icesp.cadastro.model.impl.cadastroUsuarioImpl" table="icesp_cadastroUsuario">
+		<cache usage="read-write" />
+		<id name="cpf" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="rg" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nome" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sobrenome" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailconfir" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="senha" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="senhaconfir" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="celular" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sexo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="date" type="org.hibernate.type.TimestampType" column="date_" />
+		<property name="cep" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="estado" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cidade" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="rua" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="profissao" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hospital" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

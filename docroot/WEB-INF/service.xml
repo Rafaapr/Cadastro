@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.icesp.cadastro">
+	<author>ln00704</author>
+	<namespace>icesp</namespace>
+
+	<entity name="cadastroUsuario" local-service="true" remote-service="true">
+		<!-- PK fields -->
+		<column name="cpf" type="String" primary="true" />
+		<column name="rg" type="String" />
+		<column name="nome" type="String" />
+		<column name="userName" type="String" />
+		<column name="sobrenome" type="String" />
+		<column name="email" type="String" />
+		<column name="emailconfir" type="String" />
+		<column name="senha" type="String" />
+		<column name="senhaconfir" type="String" />
+		<column name="celular" type="String" />
+		<column name="sexo" type="String" />
+		<column name="date" type="Date" />
+		<column name="cep" type="String" />
+		<column name="estado" type="String" />
+		<column name="cidade" type="String" />
+		<column name="rua" type="String" />
+		<column name="profissao" type="String" />
+		<column name="hospital" type="String" />
+		
+		<!-- Order -->
+
+		<order by="nome">
+			<order-column name="nome" />
+		</order>
+
+	</entity>
+</service-builder>

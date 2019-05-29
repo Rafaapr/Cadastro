@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head />
+
+	<h:body>
+		<h:form id="form">
+			<h:panelGrid>
+
+				<h:outputText value="CPF: (Obrigatório)" />
+				<p:inputMask mask="999.999.999-99"
+					value="#{cadastroBean.usuario.cpf}" />
+				<h:outputText value="RG: (Obrigatório)" />
+				<p:inputMask mask="99.999.999-9" value="#{cadastroBean.usuario.rg}" />
+				<h:outputText value="Nome: (Obrigatório)" />
+				<p:inputText size="70" value="#{cadastroBean.usuario.nome}" />
+				<h:outputText value="Sobrenome Completo: (Obrigatório)" />
+				<p:inputText size="70" value="#{cadastroBean.usuario.sobrenome}" />
+				<h:outputText value="E-mail: (Obrigatório)" />
+				<p:inputText size="70" value="#{cadastroBean.usuario.email}" />
+
+				<h:outputText value="E-mail de Confirmação: (Obrigatório)" />
+				<p:inputText size="70" value="#{cadastroBean.usuario.emailconfir}" />
+
+				<h:outputText value="Senha: (Obrigatório)" />
+				<p:password id="pwd1" value="#{cadastroBean.usuario.senha}"
+					label="Password 1" required="true" />
+				<h:outputText value="Confirmação de Senha: (Obrigatório)" />
+				<p:password id="pwd2" value="#{cadastroBean.usuario.senhaconfir}"
+					label="Password 2" required="true" />
+				<h:outputText value="Celular: (Obrigatório)" />
+				<p:inputMask mask="(99)9.9999-9999"
+					value="#{cadastroBean.usuario.celular}" />
+				<h:outputText value="Sexo:" />
+				<p:selectOneMenu id="console" style="width:125px"
+					value="#{cadastroBean.usuario.sexo}">
+					<f:selectItem itemLabel="Selecione" itemValue="" />
+					<f:selectItem itemLabel="Masculino" itemValue="1" />
+					<f:selectItem itemLabel="Feminino" itemValue="2" />
+				</p:selectOneMenu>
+
+				<h:outputText value="Data de Nascimento:" />
+				<p:calendar id="button" maxlength="10"
+					value="#{cadastroBean.usuario.date}" showOn="button" />
+
+				<h:outputText value="Endereço Pessoal" />
+
+				<h:outputText value="CEP:" />
+				<p:inputMask mask="99999-999" value="#{cadastroBean.usuario.cep}" />
+				<h:outputText value="Estado: (Obrigatório)" />
+				<p:inputMask mask="" value="#{cadastroBean.usuario.estado}"
+					maxlength="2" />
+				<h:outputText value="Cidade: (Obrigatório)" />
+				<p:inputMask mask="" value="#{cadastroBean.usuario.cidade}" />
+				<h:outputText value="Rua:" />
+				<p:inputText size="70" value="#{cadastroBean.usuario.rua}" />
+				<h:outputText
+					value="Complete seu endereço preenchendo o número e complemento" />
+
+				<h:outputText value="Profissão:" />
+				<p:selectOneMenu id="profId" style="width:400px"
+					value="#{cadastroBean.usuario.profissao}">
+					<f:selectItems value="#{cadastroBean.listaProfissao}"
+						var="profissao" itemLabel="#{profissao.nome}"
+						itemValue="#{profissao.id}" />
+				</p:selectOneMenu>
+
+				<h:outputText value="Hospital:" />
+				<p:selectOneMenu id="hospId" style="width:400px"
+					value="#{cadastroBean.usuario.hospital}">
+					<f:selectItems value="#{cadastroBean.listaHospital}" var="hospital"
+						itemLabel="#{hospital.nome}" itemValue="#{hospital.id}" />
+				</p:selectOneMenu>
+
+				<p:growl id="growl" life="5000" />
+				<p:commandButton value="Salvar" id="salvarId"
+					action="#{cadastroBean.salvar}" size="70"
+					style="margin-right:20px;" ajax="false" />
+					
+					<p:commandButton value="Pesquisar" id="pesquisarId"
+					action="#{cadastroBean.editar}" size="70"
+					style="margin-right:20px;" ajax="false" />
+
+			</h:panelGrid>
+		</h:form>
+	</h:body>
+</f:view>

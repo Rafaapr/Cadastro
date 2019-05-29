@@ -1,0 +1,1 @@
+create index IX_EA199725 on icesp_cadastroUsuario (cpf);

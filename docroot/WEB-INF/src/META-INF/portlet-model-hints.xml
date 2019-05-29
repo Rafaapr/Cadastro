@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.icesp.cadastro.model.cadastroUsuario">
+		<field name="cpf" type="String" />
+		<field name="rg" type="String" />
+		<field name="nome" type="String" />
+		<field name="userName" type="String" />
+		<field name="sobrenome" type="String" />
+		<field name="email" type="String" />
+		<field name="emailconfir" type="String" />
+		<field name="senha" type="String" />
+		<field name="senhaconfir" type="String" />
+		<field name="celular" type="String" />
+		<field name="sexo" type="String" />
+		<field name="date" type="Date" />
+		<field name="cep" type="String" />
+		<field name="estado" type="String" />
+		<field name="cidade" type="String" />
+		<field name="rua" type="String" />
+		<field name="profissao" type="String" />
+		<field name="hospital" type="String" />
+	</model>
+</model-hints>
